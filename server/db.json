@@ -1,0 +1,65 @@
+{
+  "usuaris": [
+    {
+      "id": 1,
+      "userName": "mviel",
+      "contrasenya": "hola",
+      "nom": "Manel"
+    },
+    {
+      "id": 2,
+      "userName": "jofrna",
+      "contrasenya": "hola",
+      "nom": "Jonh"
+    },
+    {
+      "id": 3,
+      "userName": "3",
+      "contrasenya": "3",
+      "nom": "3"
+    },
+    {
+      "id": 4,
+      "userName": "ennaco",
+      "contrasenya": "1",
+      "nom": "ennaco"
+    },
+    {
+      "id": 5,
+      "userName": "cris",
+      "contrasenya": "cras",
+      "nom": "cris"
+    },
+    {
+      "id": 6,
+      "userName": "d",
+      "contrasenya": "d",
+      "nom": "d"
+    },
+    {
+      "id": 7,
+      "userName": "s",
+      "contrasenya": "s",
+      "nom": "s"
+    },
+    {
+      "id": 8,
+      "userName": "gracielayuju",
+      "contrasenya": "1234",
+      "nom": "graciela"
+    },
+    {
+      "id": 9,
+      "userName": "A",
+      "contrasenya": "A",
+      "nom": "A"
+    }
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "nom": "jdjdj",
+      "autor": "yo"
+    }
+  ]
+}
