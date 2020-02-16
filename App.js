@@ -26,6 +26,22 @@ import Inici from './screens/Inici'
 import LoginView from './screens/LoginView'
 import Añadir from './screens/Añadir'
 import Modificar from './screens/Modificar'
+
+
+// defaultNavigationOptions aquí el css
+const defaultNavigationOptions = {
+  headerStyle: {
+    backgroundColor: '#ffffff',
+  },
+
+  headerTintColor: 'black',
+  headerTitleStyle: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+  }
+};
+
+
 export const Paginas = createStackNavigator(
   {
     LoginView: {screen:LoginView},
@@ -35,7 +51,7 @@ export const Paginas = createStackNavigator(
     Modificar:{screen:Modificar},
   },
   //la ruta inicial será el componente LoginView
-  {initialRouteName: 'LoginView'},
+  {initialRouteName: 'LoginView', defaultNavigationOptions},
 );
 
 //creamos el appcontainer que en la pantalla app se vayan mezclando todas las pantallas mientras realizamos la navegación

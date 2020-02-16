@@ -22,6 +22,10 @@ import ModificarAñadir from '../components/ModificarAñadirComponent'
 
 export default class Añadir extends Component{
 
+  static navigationOptions = {
+    title: 'Añadir Libro',
+  };
+
   //creamos una función que nos permita la navegación a la pantalla de Inici
   moveraInici = () =>{
     this.props.navigation.navigate("Inici")

@@ -23,6 +23,11 @@ import ListadoProductos from '../components/ListadoComponent'
 
 
 export default class Inici extends React.Component {
+
+  static navigationOptions = {
+    title: 'Listado de Libros',
+  };
+
  
   //creamos la función Moverse que se lo pasaremos al componente hijo ListadoProductos 
   //como un prop que de éste obtendrá la variable i
