@@ -62,6 +62,26 @@
       "autor": "yo",
       "tematica": "fffhfggf",
       "paginas": "hgfjhgfhjgjhgfhjf"
+    },
+    {
+      "id": 2,
+      "nom": "eeeeeeee",
+      "autor": "eeeeeee"
+    },
+    {
+      "id": 3,
+      "nom": "el libro de la selva",
+      "autor": "desconocido"
+    },
+    {
+      "id": 4,
+      "nom": "fffff",
+      "autor": "fff"
+    },
+    {
+      "id": 5,
+      "nom": "aa",
+      "autor": "aa"
     }
   ]
 }
