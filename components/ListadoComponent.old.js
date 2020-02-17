@@ -56,19 +56,20 @@ componentDidUpdate(){
                 <Text>{item.paginas}</Text>
               </View>
               <View style={{flex:1/2}}>
-                <View style={{borderBottomColor:'black',borderBottomWidth:1}}>
-              <Button title={"Eliminar"} color="green"
-              onPress={() =>{
-                alert("El libro '" +item.nom +"' se ha sido ELIMINADO!!!");
-                fetch('http://localhost:3000/elements/' + item.id, {
-                method: 'DELETE',
-                })
-                .then(res => res.text())
-                .then(res => console.log(res))
-            }
-        }
-            /></View>
-            <View>
+                     <View style={{borderBottomColor:'black',borderBottomWidth:1}}>
+                     <Button title={"Eliminar"} color="green"
+                         onPress={() =>{
+                         alert("El libro '" +item.nom +"' ha sido ELIMINADO!!!");
+                         fetch('http://localhost:3000/elements/' + item.id, {
+                         method: 'DELETE',
+                           })
+                         .then(res => res.text())
+                         .then(res => console.log(res))
+                          }
+                          }
+                          />
+                     </View>
+                <View>
             <Button title={"Añadir Detalles"} color="green"  onPress={()=>this.props.mover({i:item})}
             />
             </View>

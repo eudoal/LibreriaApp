@@ -43,20 +43,27 @@ export default class Inici extends React.Component {
       let nombreUsu= this.props.navigation.getParam('nusu')
 
      return (
-       <View style={{flex:1,backgroundColor:"white"}}>
-         <View style={{flex:1/12}}>
-         <NombreUsuario nom={nombreUsu}/>
-         </View>
-         <View style={{flex:10/12}}>
-           <ListadoProductos mover={this.MOVERSE} />
-         <View style={{backgroundColor:"yellow"}}>
+        <View style={{flex:1,backgroundColor:"white"}}>
+            <View >
+            <NombreUsuario nom={nombreUsu}/>
+            </View>
+                        <View style={[{
+                            marginTop: 5,
+                            marginBottom: 5,
+                            width: "100%",
+                            justifyContent: 'center',
+                            alignItems: 'center'}]}>
 
-     </View>
-         </View>
-         <View style={{flex:1/12}}>
-         <Button color='green' title={"AÑADIR"} onPress={()=>this.props.navigation.navigate("Añadir")}/>
-         </View>
-       </View>
+                        <Button  color="green" title={"AÑADIR LIBRO"} onPress={()=>this.props.navigation.navigate("Añadir")}/>
+                        </View>
+            <View style={{flex:10/12}}>
+            <ListadoProductos mover={this.MOVERSE} />
+                <View style={{backgroundColor:"yellow"}}>
+                </View>
+            </View>
+
+        </View>
+
      );
    };
 }

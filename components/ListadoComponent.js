@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import FontAwesome from 'react-fontawesome';
+// import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 import React,{Component} from 'react';
 import {
@@ -127,10 +128,11 @@ SearchFilterFunction(text) {
   return (
    <View style={{backgroundColor:"white"}}>
         <SearchBar
+          lightTheme
+          noIcon
           onChangeText={text => this.SearchFilterFunction(text)}
           onClear={text => this.SearchFilterFunction('')}
-          icon={{ type: 'font-awesome', name: 'search' }}
-          placeholder="Type Here..."
+          placeholder="Busca ..."
           value={this.state.search}
           />
 
@@ -141,20 +143,44 @@ SearchFilterFunction(text) {
           renderItem={({ item }) => (
             // Single Comes here which will be repeatative for the FlatListItems
            <View style={styles.textStyle}>
-               <Text>Título: {item.nom}</Text>
-               <Text>Autor: {item.autor}</Text>
-               <Text>Temática: {item.tematica}</Text>
-               <Text>Nº Páginas: {item.paginas}</Text>
+           <View style={{marginLeft: 30,}}>
+               <Text style={{fontWeight: 'bold',}}>Título: {item.nom}</Text>
+               <Text style={{fontWeight: 'bold',}}>Autor: {item.autor}</Text>
+               <Text style={{fontWeight: 'bold',}}>Temática: {item.tematica}</Text>
+               <Text style={{fontWeight: 'bold',}}>Nº Páginas: {item.paginas}</Text>
+               </View>
+    <View style={styles.container}>
+     <View style={styles.buttonContainer}>
+               <Button title={"Añadir Detalles"}
+                   color="blue"
+                   onPress={()=>this.props.mover({i:item})}
+               />
+                   </View>
+                   <View style={styles.buttonContainer}>
+               <Button title={"Eliminar"}
+                    color="red"
+                    onPress={() =>{
+                    alert("El libro '" +item.nom +"' se ha sido ELIMINADO!!!");
+                    fetch('http://localhost:3000/elements/' + item.id, {
+                    method: 'DELETE',
+                    })
+                    .then(res => res.text())
+                    .then(res => console.log(res))
+                    }
+                    }
+               />
+                  </View>
+                 </View>
            </View>
+
 
           )}
 
           enableEmptySections={true}
           style={{ marginTop: 10 }}
           keyExtractor={(item, index) => index.toString()}
-        />
 
-
+           />
      </View>
   );
 };
@@ -164,13 +190,24 @@ const styles = StyleSheet.create({
   viewStyle: {
     justifyContent: 'center',
     flex: 1,
-    backgroundColor:'white',
+  backgroundColor:'white',
     marginTop: Platform.OS == 'ios'? 30 : 0
   },
   textStyle: {
     padding: 10,
   },
+    container: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    buttonContainer: {
+      flex: 1,
+      padding: 10,
+    },
 });
+
 
 //en el Boton de Modificar haremos uso del prop que le hemos pasado por la pantalla de Inici y la variable i obtendrá todo el item concreto del flatList 
 

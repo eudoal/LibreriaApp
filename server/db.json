@@ -64,24 +64,19 @@
       "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
-      "id": 2,
-      "nom": "eeeeeeee",
-      "autor": "eeeeeee"
-    },
-    {
       "id": 3,
       "nom": "el libro de la selva",
       "autor": "desconocido"
     },
     {
-      "id": 4,
-      "nom": "fffff",
-      "autor": "fff"
+      "id": 6,
+      "nom": "1",
+      "autor": "1"
     },
     {
-      "id": 5,
-      "nom": "aa",
-      "autor": "aa"
+      "id": 7,
+      "nom": "2",
+      "autor": "2"
     }
   ]
 }
