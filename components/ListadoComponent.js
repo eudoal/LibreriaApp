@@ -124,7 +124,6 @@ SearchFilterFunction(text) {
          </View>
        );
      }
-
   return (
    <View style={{backgroundColor:"white"}}>
         <SearchBar

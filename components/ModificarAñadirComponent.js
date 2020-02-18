@@ -33,6 +33,7 @@ export default class ModificarAñadir extends Component{
         }
     }
 
+
     //SI NO ESTÁ VACÍO, VAMOS A AÑADIR
     //dependiendo desde dónde entramos, ya sea modificar o añadir el prop de producto será diferente. Si es añadir estará
     // vacío y si es 
@@ -114,14 +115,8 @@ export default class ModificarAñadir extends Component{
               console.log("Error de red: " + error);
             })
         }
-
-
-
-
-
       }
     }
-
 
 
 

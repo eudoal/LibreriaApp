@@ -18,12 +18,56 @@ import {
 import { exportDefaultSpecifier, tsImportEqualsDeclaration } from '@babel/types';
 
 import 'react-native-gesture-handler';
+import RNPickerSelect from 'react-native-picker-select';
 
+const tematicas = [
+    {
+    label: 'Novela literaria',
+    value: 'Novela literaria',
+    },
+    {
+    label: 'Novela contemporánea',
+    value: 'Novela contemporánea',
+    },
+    {
+    label: 'Novela negra',
+    value: 'Novela negra',
+    },
+    {
+      label: 'Novela histórica',
+      value: 'Novela histórica',
+    },
+    {
+      label: 'Novela romántica',
+      value: 'Novela romántica',
+    },
+    {
+      label: 'Terror',
+      value: 'Terror',
+    },
+    {
+      label: 'Ciencia ficción',
+      value: 'Ciencia ficción',
+    },
+    {
+      label: 'Fantasía',
+      value: 'Fantasía',
+    },
+    {
+      label: 'Infantil',
+      value: 'Infantil',
+    },
+    {
+      label: 'Juvenil',
+      value: 'Juvenil',
+    }
+];
 
 export default class ModificarExtras extends Component{
     constructor(props){
         super(props);
         //creamos el state con las propiedades que necesitamos
+
         this.state={
             id:"",
             nom:"",
@@ -139,8 +183,21 @@ export default class ModificarExtras extends Component{
             <TextInput onChangeText={(text) => this.setState({autor: text})} placeholder={"Pon la autor del Libro"}
             style={styles.title} keyboardType={"default"} value={this.state.autor}/>
 
-            <TextInput onChangeText={(text) => this.setState({tematica: text})} placeholder={"Pon la temática del libro"}
-            style={styles.title} keyboardType={"default"} value={this.state.tematica}/>
+<RNPickerSelect
+            placeholder={{}}
+            items={tematicas}
+            onValueChange={value => {
+              this.setState({
+                tematica: value,
+              });
+            }}
+            InputAccessoryView={() => null}
+            style={pickerSelectStyles}
+            value={this.state.tematica}
+          />
+
+
+
 
             <TextInput onChangeText={(text) => this.setState({paginas: text})} placeholder={"Pon la cantidad de paginas"}
             style={styles.title} keyboardType={"default"} value={this.state.paginas}/>
@@ -197,3 +254,16 @@ export default class ModificarExtras extends Component{
 
          }
        });
+
+  const pickerSelectStyles = StyleSheet.create({
+    inputAndroid: {
+      fontSize: 16,
+      paddingHorizontal: 10,
+      paddingVertical: 8,
+      borderWidth: 0.5,
+      borderColor: 'purple',
+      borderRadius: 8,
+      color: 'black',
+      paddingRight: 30, // to ensure the text is never behind the icon
+    },
+  });
