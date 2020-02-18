@@ -17,15 +17,33 @@ import {
 } from 'react-native';
 import { SearchBar, CheckBox } from 'react-native-elements';
 
-  let estado = true;
+import RNPickerSelect from 'react-native-picker-select';
 
+const tematicas = [
+    {
+    label: 'nom',
+    value: 'nom',
+    },
+    {
+    label: 'autor',
+    value: 'autor',
+    },
+    {
+    label: 'tematica',
+    value: 'tematica',
+    },
+    {
+      label: 'paginas',
+      value: 'paginas',
+    },
+];
 
 export default class ListadoProductos extends Component {
 constructor(props){
   super(props)
 
   //nos creamos un objeto productos que ahora estará vacío
-  this.state={productos:undefined, isLoading: true, search: '', estado: true}
+  this.state={productos:undefined, isLoading: true, search: '', tematica: 'nom'}
   this.arrayholder = [];
 }
 
@@ -77,20 +95,31 @@ this.search.clear();
 
 
 SearchFilterFunction(text) {
+    const tematica = this.state.tematica
     //passing the inserted text in textinput
     const newData = this.arrayholder.filter(function(item) {
       //applying filter for the inserted text in search bar
 
-      if (!estado) {
+      if (tematica =='nom') {
             const itemData = item.id ? item.nom.toUpperCase() : ''.toUpperCase();
             const textData = text.toUpperCase();
             return itemData.indexOf(textData) > -1;
-      }else {
+      }else if (tematica =='autor'){
 
             const itemData = item.id ? item.autor.toUpperCase() : ''.toUpperCase();
             const textData = text.toUpperCase();
             return itemData.indexOf(textData) > -1;
-      }
+        }else if (tematica =='tematica'){
+
+              const itemData = item.id ? item.tematica.toUpperCase() : ''.toUpperCase();
+              const textData = text.toUpperCase();
+              return itemData.indexOf(textData) > -1;
+        }else if (tematica =='paginas'){
+
+              const itemData = item.id ? item.paginas.toUpperCase() : ''.toUpperCase();
+              const textData = text.toUpperCase();
+              return itemData.indexOf(textData) > -1;
+        }
 
     });
     this.setState({
@@ -133,6 +162,19 @@ SearchFilterFunction(text) {
           onClear={text => this.SearchFilterFunction('')}
           placeholder="Busca ..."
           value={this.state.search}
+          />
+
+<RNPickerSelect
+            placeholder={{}}
+            items={tematicas}
+            onValueChange={value => {
+              this.setState({
+                tematica: value,
+              });
+            }}
+            InputAccessoryView={() => null}
+            style={pickerSelectStyles}
+            value={this.state.tematica}
           />
 
           <FlatList
@@ -206,6 +248,19 @@ const styles = StyleSheet.create({
       padding: 10,
     },
 });
+
+  const pickerSelectStyles = StyleSheet.create({
+    inputAndroid: {
+      fontSize: 16,
+      paddingHorizontal: 10,
+      paddingVertical: 8,
+      borderWidth: 0.5,
+      borderColor: 'purple',
+      borderRadius: 8,
+      color: 'black',
+      paddingRight: 30, // to ensure the text is never behind the icon
+    },
+  });
 
 
 //en el Boton de Modificar haremos uso del prop que le hemos pasado por la pantalla de Inici y la variable i obtendrá todo el item concreto del flatList 

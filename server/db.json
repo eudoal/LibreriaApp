@@ -60,48 +60,64 @@
       "id": 1,
       "nom": "jdjdj",
       "autor": "yo",
-      "tematica": "Terror",
+      "tematica": "Ciencia ficción",
       "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 3,
       "nom": "el libro de la selva",
-      "autor": "desconocido"
+      "autor": "desconocido",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 6,
       "nom": "1",
-      "autor": "0000"
+      "autor": "0000",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 7,
       "nom": "2",
-      "autor": "2"
+      "autor": "2",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 8,
       "nom": "uuuuu",
-      "autor": "uuuuuu"
+      "autor": "uuuuuu",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 9,
       "nom": "qqqq",
-      "autor": "qqqqq"
+      "autor": "qqqqq",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 10,
       "nom": "zzz",
-      "autor": "zzz"
+      "autor": "zzz",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 11,
       "nom": "1111111",
-      "autor": "1111111"
+      "autor": "1111111",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     },
     {
       "id": 12,
       "nom": "5555",
-      "autor": "5555"
+      "autor": "5555",
+      "tematica": "Terror",
+      "paginas": "hgfjhgfhjgjhgfhjf"
     }
   ]
 }
