@@ -19,21 +19,23 @@ import { SearchBar, CheckBox } from 'react-native-elements';
 
 import RNPickerSelect from 'react-native-picker-select';
 
+import { NavigationEvents } from 'react-navigation';
+
 const tematicas = [
     {
-    label: 'nom',
+    label: 'Bucar por Título del libro',
     value: 'nom',
     },
     {
-    label: 'autor',
+    label: 'Bucar por Autor del libro',
     value: 'autor',
     },
     {
-    label: 'tematica',
+    label: 'Bucar por Temática del libro',
     value: 'tematica',
     },
     {
-      label: 'paginas',
+      label: 'Bucar por nº de Páginas del libro',
       value: 'paginas',
     },
 ];
@@ -50,7 +52,7 @@ constructor(props){
 
   //Obtener productos
 
-componentDidMount(){
+update(){
   return fetch("http://localhost:3000/elements")
     .then((response)=> response.json())
      .then(responseJson => {
@@ -65,6 +67,24 @@ componentDidMount(){
             );
           })
     .catch((error)=> Console.log(error))
+}
+
+componentDidMount(){
+//  return fetch("http://localhost:3000/elements")
+//    .then((response)=> response.json())
+//     .then(responseJson => {
+//            this.setState(
+//              {
+//                isLoading: false,
+//                dataSource: responseJson,
+//              },
+//              function() {
+//                this.arrayholder = responseJson;
+//              }
+//            );
+//          })
+//    .catch((error)=> Console.log(error))
+this.update()
 }
 
 //componentDidUpdate(){
@@ -163,6 +183,12 @@ SearchFilterFunction(text) {
           placeholder="Busca ..."
           value={this.state.search}
           />
+          <NavigationEvents
+                onWillFocus={() => this.update()}
+//                onDidFocus={payload => this.update(), payload)}
+//                onWillBlur={payload => console.log('will blur', payload)}
+//                onDidBlur={payload => console.log('did blur', payload)}
+              />
 
 <RNPickerSelect
             placeholder={{}}

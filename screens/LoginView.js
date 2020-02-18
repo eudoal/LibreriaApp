@@ -5,7 +5,18 @@ import {
 import 'react-native-gesture-handler';
 import LoginViewComponent from '../components/LoginViewComponent';
 
+import ActionBarImage from '../components/actionBarImage';
+
 export default class LoginView extends Component {
+
+  static navigationOptions = {
+    title: 'Loguéate aquí',
+      headerRight: () => <ActionBarImage />,
+//      headerStyle: {
+//        backgroundColor: '#e3e3e3',
+//      },
+//      headerTintColor: '#606070',
+  };
 
   //Funciones que le pasaremos al hijo en forma de prop. En moveraInici realizará la navegación 
   //a la pantalla Inici y el valor nusu

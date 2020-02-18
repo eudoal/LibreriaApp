@@ -14,13 +14,25 @@ import {
 } from 'react-native';
 import { exportDefaultSpecifier, tsImportEqualsDeclaration } from '@babel/types';
 
+import ActionBarImage from '../components/actionBarImage';
+
 import 'react-native-gesture-handler';
 import Modificar from '../components/ModificarComponent'
 
 export default class ModificarExtras extends Component{
 
+  static navigationOptions = {
+    title: 'Modifica lo que quieras',
+      headerRight: () => <ActionBarImage />,
+//      headerStyle: {
+//        backgroundColor: '#e3e3e3',
+//      },
+//      headerTintColor: '#606070',
+  };
+
   //función creada para mover a la pagina de Inici que se le pasará como prop a ModificarAñadir  
   moveraInici = () =>{
+
     this.props.navigation.navigate("Inici")
   }
       render(){

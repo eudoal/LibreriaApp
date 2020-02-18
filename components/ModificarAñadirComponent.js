@@ -85,6 +85,8 @@ export default class ModificarAñadir extends Component{
              id:"",
              nom:"",
              autor:"",
+             tematica:"",
+             paginas:"",
             }); 
         }
         else{

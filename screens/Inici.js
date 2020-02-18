@@ -20,15 +20,21 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import NombreUsuario from '../components/NombreUsuarioComponent'
 import ListadoProductos from '../components/ListadoComponent'
-
+import ActionBarImage from '../components/actionBarImage';
 
 export default class Inici extends React.Component {
 
   static navigationOptions = {
-    title: 'Listado de Libros',
+    title: 'Listado de mis Libros',
+      headerRight: () => <ActionBarImage />,
+//      headerStyle: {
+//        backgroundColor: '#e3e3e3',
+//      },
+//      headerTintColor: '#606070',
   };
 
- 
+
+
   //creamos la función Moverse que se lo pasaremos al componente hijo ListadoProductos 
   //como un prop que de éste obtendrá la variable i
   //que se la pasará a modificar con el nombre de hr

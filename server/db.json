@@ -59,7 +59,7 @@
     {
       "id": 1,
       "nom": "jdjdj",
-      "autor": "yo",
+      "autor": "yoo",
       "tematica": "Ciencia ficción",
       "paginas": "hgfjhgfhjgjhgfhjf"
     },
@@ -118,6 +118,33 @@
       "autor": "5555",
       "tematica": "Terror",
       "paginas": "hgfjhgfhjgjhgfhjf"
+    },
+    {
+      "id": 13,
+      "nom": "pppaaaa",
+      "autor": "ppp",
+      "tematica": "Fantasía",
+      "paginas": "10000"
+    },
+    {
+      "id": 14,
+      "nom": "JOllll",
+      "autor": "kfkfkf"
+    },
+    {
+      "id": 15,
+      "nom": "pepep",
+      "autor": "pepepe"
+    },
+    {
+      "id": 16,
+      "nom": "dddd",
+      "autor": "ddddd"
+    },
+    {
+      "id": 17,
+      "nom": "pepito grillo",
+      "autor": "quien sabe"
     }
   ]
 }
