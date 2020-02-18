@@ -1,34 +1,9 @@
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  StatusBar,
-  Alert,
-  FlatList,
-  TextInput,
-  TouchableOpacity,
-
-
-
-} from 'react-native';
-import { exportDefaultSpecifier, tsImportEqualsDeclaration } from '@babel/types';
-
+import {StyleSheet,View,Text,Button,Alert,TextInput} from 'react-native';
 import 'react-native-gesture-handler';
 import RNPickerSelect from 'react-native-picker-select';
 
 const tematicas = [
-    {
-    label: 'Novela literaria',
-    value: 'Novela literaria',
-    },
-    {
-    label: 'Novela contemporánea',
-    value: 'Novela contemporánea',
-    },
     {
     label: 'Novela negra',
     value: 'Novela negra',
@@ -36,10 +11,6 @@ const tematicas = [
     {
       label: 'Novela histórica',
       value: 'Novela histórica',
-    },
-    {
-      label: 'Novela romántica',
-      value: 'Novela romántica',
     },
     {
       label: 'Terror',
@@ -52,14 +23,6 @@ const tematicas = [
     {
       label: 'Fantasía',
       value: 'Fantasía',
-    },
-    {
-      label: 'Infantil',
-      value: 'Infantil',
-    },
-    {
-      label: 'Juvenil',
-      value: 'Juvenil',
     }
 ];
 
@@ -79,11 +42,7 @@ export default class ModificarExtras extends Component{
         }
     }
 
-    //SI NO ESTÁ VACÍO, VAMOS A AÑADIR
-    //dependiendo desde dónde entramos, ya sea modificar o añadir el prop de producto será diferente. Si es añadir estará
-    // vacío y si es
-    //modificar se le aplicarán los valores del estado con los valores del prop producto (significa que está rellenado)
-    componentDidMount(){
+     componentDidMount(){
       if(this.props.producto != ""){
         this.setState({nom:this.props.producto.nom})
         this.setState({autor:this.props.producto.autor})
@@ -93,7 +52,6 @@ export default class ModificarExtras extends Component{
       }
     }
 
-    //comprobamos que todo está rellenado
     funciona = () => {
       var alert = ""
 
@@ -106,13 +64,9 @@ export default class ModificarExtras extends Component{
 
         alert += "Pon la autorn \n"
       }
-
-
-
      if(alert != "" ){
         Alert.alert("Te falta poner: ",alert);
       }
-      //dependiendo de si el prop.producto está lleno o vacío se detectará de si se quiere añadir o modificar. VACÍO=AÑADIR / LLENO=MODIFICAR
       else{
         if(this.props.producto == ""){
           fetch('http://localhost:3000/elements', {
@@ -195,75 +149,69 @@ export default class ModificarExtras extends Component{
             style={pickerSelectStyles}
             value={this.state.tematica}
           />
-
-
-
-
             <TextInput onChangeText={(text) => this.setState({paginas: text})} placeholder={"Pon la cantidad de paginas"}
             style={styles.title} keyboardType={"default"} value={this.state.paginas}/>
-
-
-
             <View style={{borderBottomColor:'black',borderBottomWidth:1}}>
-              <Button color='green' title="Actualizar" onPress={this.funciona}/>
-            </View>
-            <View>
-              <Button color='green' title="Volver" onPress={()=>this.props.inici()} />
+              <Button color='#B4923A' title="Actualizar" onPress={this.funciona}/>
             </View>
             </View>
         </View>
-
-
       )
     }
 
   }
-
-  //con el botón Cancelar llamamos a la función que le hemos pasado desde Añadir/Modificar para volver al inici si queremos cancelar el proceso
-
-
-
-
   const styles = StyleSheet.create({
     container: {
       borderRadius: 3,
       borderWidth: 0.3,
       borderColor: '#d6d7da',
     },
+    buttonContainer: {
+      height: 45,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 20,
+      width: 250,
+      borderRadius: 30,
+    },
     title: {
       fontSize: 20,
       fontWeight: 'bold',
       borderColor:"black",
       borderWidth:2,
-
+      marginBottom:5
     },
     titledni:{
       fontSize: 20,
       fontWeight: 'bold',
       borderColor:"black",
-      borderWidth:5
+      borderWidth:5,
+      
     },
     posicion:{
-      alignItems: "center"
+      padding:15,
 
-         },
-         activeTitle: {
-           color: 'red',
-         },
-         borde:{
+    },
+    activeTitle: {
+      color: 'red',
+    },
+    borde:{
 
-         }
-       });
+    }
+  });
 
   const pickerSelectStyles = StyleSheet.create({
     inputAndroid: {
-      fontSize: 16,
+      fontSize: 20,
+      fontWeight:'bold',
       paddingHorizontal: 10,
       paddingVertical: 8,
-      borderWidth: 0.5,
-      borderColor: 'purple',
+      borderWidth: 2,
+      borderColor: 'black',
       borderRadius: 8,
       color: 'black',
       paddingRight: 30, // to ensure the text is never behind the icon
+     
     },
   });

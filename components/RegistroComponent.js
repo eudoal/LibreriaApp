@@ -1,15 +1,6 @@
 import 'react-native-gesture-handler'
 import React, { Component } from 'react';
-import {
-  TouchableOpacity,
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Button,
-  Alert,
-} from 'react-native';
-
+import {TouchableOpacity,View,Text,StyleSheet,TextInput,Alert,} from 'react-native';
 
 export default class RegistroComponent extends Component{
     constructor(props){
@@ -84,14 +75,12 @@ export default class RegistroComponent extends Component{
           }
 
     }
-
-
-
+    
     render(){
         return (
             <View style={styles.container}>
                 <View>
-                    <Text style={{fontSize:50, color:'green',fontWeight: 'bold',padding:10}}>REGISTRO</Text>
+                    <Text style={{fontSize:50, color:'#B29039',fontWeight: 'bold',padding:10}}>REGISTRO</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <TextInput style={styles.inputs}
@@ -111,10 +100,9 @@ export default class RegistroComponent extends Component{
                 </View>
                 <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]}
                 onPress={this.comprobarDatos}>
-                    <Text>VALIDAR</Text>
+                    <Text style={styles.loginText}>VALIDAR</Text>
                 </TouchableOpacity>
             </View>
-
         )
     }
 }
@@ -157,9 +145,11 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       width: 250,
       borderRadius: 30,
+      
     },
     loginButton: {
-      backgroundColor: "green",
+      backgroundColor: "#505050",
+      
     },
     loginText: {
       color: 'white',

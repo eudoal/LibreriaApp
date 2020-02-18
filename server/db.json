@@ -2,149 +2,81 @@
   "usuaris": [
     {
       "id": 1,
-      "userName": "mviel",
-      "contrasenya": "hola",
-      "nom": "Manel"
-    },
-    {
-      "id": 2,
-      "userName": "jofrna",
-      "contrasenya": "hola",
-      "nom": "Jonh"
-    },
-    {
-      "id": 3,
-      "userName": "3",
-      "contrasenya": "3",
-      "nom": "3"
-    },
-    {
-      "id": 4,
-      "userName": "ennaco",
-      "contrasenya": "1",
-      "nom": "ennaco"
-    },
-    {
-      "id": 5,
-      "userName": "cris",
-      "contrasenya": "cras",
-      "nom": "cris"
-    },
-    {
-      "id": 6,
-      "userName": "d",
-      "contrasenya": "d",
-      "nom": "d"
-    },
-    {
-      "id": 7,
-      "userName": "s",
-      "contrasenya": "s",
-      "nom": "s"
-    },
-    {
-      "id": 8,
-      "userName": "gracielayuju",
-      "contrasenya": "1234",
-      "nom": "graciela"
-    },
-    {
-      "id": 9,
-      "userName": "A",
-      "contrasenya": "A",
-      "nom": "A"
+      "userName": "eugeniojoan",
+      "contrasenya": "eugeniojoan",
+      "nom": "eugeniojoan"
     }
   ],
   "elements": [
     {
       "id": 1,
-      "nom": "jdjdj",
-      "autor": "yoo",
+      "nom": "1984",
+      "autor": "George Orwell",
       "tematica": "Ciencia ficción",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "paginas": "352"
+    },
+    {
+      "id": 2,
+      "nom": "NEUROMANTE",
+      "autor": "William Gibson",
+      "tematica": "Ciencia ficción",
+      "paginas": "320"
     },
     {
       "id": 3,
-      "nom": "el libro de la selva",
-      "autor": "desconocido",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "nom": "EL SEÑOR DE LOS ANILLOS I: LA COMUNIDAD DEL ANILLO",
+      "autor": "J.R.R. Tolkien",
+      "tematica": "Fantasia",
+      "paginas": "488"
+    },
+    {
+      "id": 4,
+      "nom": "LA HISTORIA INTERMINABLE",
+      "autor": "Michael Ende",
+      "tematica": "Fantasia",
+      "paginas": "496"
+    },
+    {
+      "id": 5,
+      "nom": "LA PESTE NEGRA",
+      "autor": "Luis Miguel Guerra",
+      "tematica": "Novela histórica",
+      "paginas": "320"
     },
     {
       "id": 6,
-      "nom": "1",
-      "autor": "0000",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "nom": "EL GUARDIÁN DE LAS PALABRAS",
+      "autor": "Blas Malo",
+      "tematica": "Novela histórica",
+      "paginas": "624"
     },
     {
       "id": 7,
-      "nom": "2",
-      "autor": "2",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "nom": "LA DANZA DE LOS TULIPANES",
+      "autor": "Ibom Martin Alvarez",
+      "tematica": "Novela negra",
+      "paginas": "496"
     },
     {
       "id": 8,
-      "nom": "uuuuu",
-      "autor": "uuuuuu",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "nom": "REINA ROJA",
+      "autor": "Juan Gomez-Jurado",
+      "tematica": "Novela negra",
+      "paginas": "568"
     },
     {
       "id": 9,
-      "nom": "qqqq",
-      "autor": "qqqqq",
+      "nom": "EL VISITANTE",
+      "autor": "Stephen King",
       "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
+      "paginas": "592"
     },
     {
       "id": 10,
-      "nom": "zzz",
-      "autor": "zzz",
+      "nom": "EL NECRONOMICON",
+      "autor": "H.P.Lovecraft",
       "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
-    },
-    {
-      "id": 11,
-      "nom": "1111111",
-      "autor": "1111111",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
-    },
-    {
-      "id": 12,
-      "nom": "5555",
-      "autor": "5555",
-      "tematica": "Terror",
-      "paginas": "hgfjhgfhjgjhgfhjf"
-    },
-    {
-      "id": 13,
-      "nom": "pppaaaa",
-      "autor": "ppp",
-      "tematica": "Fantasía",
-      "paginas": "10000"
-    },
-    {
-      "id": 14,
-      "nom": "JOllll",
-      "autor": "kfkfkf"
-    },
-    {
-      "id": 15,
-      "nom": "pepep",
-      "autor": "pepepe"
-    },
-    {
-      "id": 16,
-      "nom": "dddd",
-      "autor": "ddddd"
-    },
-    {
-      "id": 17,
-      "nom": "pepito grillo",
-      "autor": "quien sabe"
+      "paginas": "304"
     }
   ]
 }

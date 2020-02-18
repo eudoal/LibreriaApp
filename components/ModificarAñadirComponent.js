@@ -1,22 +1,5 @@
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  StatusBar,
-  Alert,
-  FlatList,
-  TextInput,
-  TouchableOpacity,
-
-  
-  
-} from 'react-native';
-import { exportDefaultSpecifier, tsImportEqualsDeclaration } from '@babel/types';
-
+import {StyleSheet,View,Text,Button,Alert,TextInput} from 'react-native';
 import 'react-native-gesture-handler';
 
 
@@ -28,16 +11,8 @@ export default class ModificarAñadir extends Component{
             id:"",
             nom:"",
             autor:"",
-         
-           
         }
     }
-
-
-    //SI NO ESTÁ VACÍO, VAMOS A AÑADIR
-    //dependiendo desde dónde entramos, ya sea modificar o añadir el prop de producto será diferente. Si es añadir estará
-    // vacío y si es 
-    //modificar se le aplicarán los valores del estado con los valores del prop producto (significa que está rellenado)
     componentDidMount(){
       if(this.props.producto != ""){
         this.setState({nom:this.props.producto.nom})
@@ -45,7 +20,6 @@ export default class ModificarAñadir extends Component{
         this.setState({id:this.props.producto.id})
       }
     }
-
     //comprobamos que todo está rellenado
     funciona = () => {
       var alert = ""
@@ -60,12 +34,10 @@ export default class ModificarAñadir extends Component{
         alert += "Pon el autor \n"
       } 
 
-
-  
      if(alert != "" ){
         Alert.alert("Te falta poner: ",alert);
       }
-      //dependiendo de si el prop.producto está lleno o vacío se detectará de si se quiere añadir o modificar. VACÍO=AÑADIR / LLENO=MODIFICAR
+
       else{
         if(this.props.producto == ""){
           fetch('http://localhost:3000/elements', {
@@ -121,7 +93,6 @@ export default class ModificarAñadir extends Component{
     }
 
 
-
     render(){
       return(
         <View style={styles.posicion}>
@@ -134,46 +105,46 @@ export default class ModificarAñadir extends Component{
             <TextInput onChangeText={(text) => this.setState({autor: text})} placeholder={"Autor del Libro"}
             style={styles.title} keyboardType={"default"} value={this.state.autor}/>
             <View style={{borderBottomColor:'black',borderBottomWidth:1}}>
-              <Button color='green' title="Añadir" onPress={this.funciona}/>
+              <Button color='#B59345' style={styles.buttonContainer} title="Añadir" onPress={this.funciona}/>
             </View>
-            <View>
-              <Button color='green' title="Volver" onPress={()=>this.props.inici()} />
-            </View>
+           
             </View>
         </View>
-  
-  
       )
+      }
     }
-  
-  }
 
-  //con el botón Cancelar llamamos a la función que le hemos pasado desde Añadir/Modificar para volver al inici si queremos cancelar el proceso
-
-
-
-  
   const styles = StyleSheet.create({
     container: {
       borderRadius: 3,
       borderWidth: 0.3,
       borderColor: '#d6d7da',
     },
+    buttonContainer: {
+      height: 45,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 20,
+      width: 250,
+      borderRadius: 30,
+    },
     title: {
       fontSize: 20,
       fontWeight: 'bold',
       borderColor:"black",
       borderWidth:2,
-
+      marginBottom:5
     },
     titledni:{
       fontSize: 20,
       fontWeight: 'bold',
       borderColor:"black",
-      borderWidth:5
+      borderWidth:5,
+      
     },
     posicion:{
-      alignItems: "center"
+      padding:15,
 
     },
     activeTitle: {
