@@ -14,7 +14,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "react": "16.9.0",
     "react-fontawesome": "^1.7.1",
-    "react-native": "0.61.5",
+    "react-native": "0.62.3",
     "react-native-elements": "^1.2.7",
     "react-native-fontawesome": "^7.0.0",
     "react-native-gesture-handler": "^1.5.3",
